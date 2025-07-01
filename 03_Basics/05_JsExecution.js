@@ -63,3 +63,34 @@ function addNum(num1,num2){
 }
 let result1 = addNum(val1,val2)
 let result2 = addNum(10,2)
+
+/**
+ * Global Execution is always created first(stays at bottom of stack):
+ *  Phases: 1.Memory Creation:
+ *              val1 = undefined, val2 = undefined, addnum = function definition,result1 = undefined, result2 = undefined
+ *          2.Execution: 
+ *               val1 =10,val2= 5, Execution Context(for addNum)
+ *  FUNCTION Execution Context(for addNum(result1)):
+ *  Phases: 1. Creation: num1 = undefined, num2=undefined, total = undefined
+ *          2. Execution: num1 = 10,num2 = 5, total = 15
+ * 
+ * NOW total is return to Execution PHASE of GLOBAL AND ABOVE FUNCTION EC IS
+ *  DELETED AFTER RETURNING THE VALUE TO GLOBAL EC
+ * 
+ * 2.Execution phase of (GLOBAL EC CONTINUES AFTER TAKING VALUE): 
+ *       val1 =10,val2= 5, Execution Context(for addNum),
+ *       result1 = 15(taken from function EC environment)
+ *       result2 = 12(taken from Function EC environment)
+ * 
+ * FUNCTION Execution Context(for addNum(result2)):
+ *  Phases: 1. Creation: num1 = undefined, num2=undefined, total = undefined
+ *          2. Execution: num1 = 10,num2 = 5, total = 15
+ */
+
+/**
+ *              |                                       |
+ *              |  Function EC3(are removed after done) |
+ *              |  Function EC2(are removed after done) | <- STACK follow LIFO(so func3 will be removed first then func2 then func1)
+ *              |__Function EC1(are removed after done)_|
+ *              |__Global EC_(Always at bottom)_________| <- THIS WILL NEVER BE REMOVED
+ */
