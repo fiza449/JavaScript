@@ -44,3 +44,19 @@ const newnums = mynumbers
                .map((num) => num + 1) //10 will be num and 10 + 1 = 11 (will be passed)
                .filter((num) => num>= 40)
 console.log(newnums)
+
+//Array.reduce()
+
+const myNums = [1,2,3]
+const myTotal = myNums.reduce((acc,currval) => {
+      console.log(`acc: ${acc} and currval: ${currval}`)
+      return acc + currval
+},0) //<- acc=0 (initialization)
+
+console.log(`the return value is: ${myTotal}`)
+/**
+ * acc: 0 and currval: 1
+acc: 1 and currval: 2
+acc: 3 and currval: 3
+the return value is: 6
+ */
