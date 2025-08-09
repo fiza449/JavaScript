@@ -30,7 +30,7 @@ I believe in **learning by building** and am always eager to explore new technol
 ## 📫 Contact Me
 - **Email**:fizaansari667789@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-linkedin/)  
-- **LeetCode**: [Your LeetCode Profile](https://leetcode.com/yourusername/)  
+- **LeetCode**: [Your LeetCode Profile](https://leetcode.com/u/Fizaaa6677/)  
 
 ---
 
